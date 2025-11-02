@@ -29,7 +29,6 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteOrder;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import m.Swap;
@@ -267,27 +266,13 @@ public class DoomIO {
   }
 
   public static void readObjectArrayWithReflection(DataInputStream dis, IReadableDoomObject[] s,
-                                                   int len) throws Exception {
+                                                   int len)
+      throws IOException, InstantiationException, IllegalAccessException {
 
     if (len == 0) {
       return;
     }
     Class<?> c = s.getClass().getComponentType();
-
-    for (int i = 0; i < Math.min(len, s.length); i++) {
-      if (s[i] == null) {
-        s[i] = (IReadableDoomObject) c.newInstance();
-      }
-      s[i].read(dis);
-    }
-  }
-
-  public static void readObjectArray(DataInputStream dis, IReadableDoomObject[] s, int len,
-                                     Class<?> c) throws Exception {
-
-    if ((s == null) || (len == 0)) {
-      return;
-    }
 
     for (int i = 0; i < Math.min(len, s.length); i++) {
       if (s[i] == null) {

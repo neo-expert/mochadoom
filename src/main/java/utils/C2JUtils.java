@@ -164,8 +164,6 @@ public final class C2JUtils {
    *
    * @param os
    * @param c
-   * @throws Exception
-   * @throws
    */
 
   public static <T> void initArrayOfObjects(T[] os, Class<T> c) {
@@ -187,7 +185,6 @@ public final class C2JUtils {
    * way, be my guest.
    *
    * @param os
-   * @throws Exception
    * @throws
    */
   @Deprecated
@@ -288,7 +285,6 @@ public final class C2JUtils {
    * @param os
    * @param startpos inclusive
    * @param endpos   non-inclusive
-   * @throws Exception
    * @throws
    */
 

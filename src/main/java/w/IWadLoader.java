@@ -27,10 +27,9 @@ public interface IWadLoader {
    * W_Reload Flushes any of the reloadable lumps in memory and reloads the
    * directory.
    *
-   * @throws Exception
    */
   @W_Wad.C(W_Reload)
-  void Reload() throws Exception;
+  void Reload() throws IOException, InstantiationException, IllegalAccessException;
 
   /**
    * W_InitMultipleFiles
@@ -63,7 +62,7 @@ public interface IWadLoader {
    *
    * @param filename
    */
-  void InitFile(String filename) throws Exception;
+  void InitFile(String filename) throws IOException;
 
   /**
    * W_NumLumps

@@ -210,7 +210,7 @@ public class WadLoader implements IWadLoader {
    * This is where lumps are actually read + loaded from a file.
    *
    * @param filename
-   * @throws Exception
+   * @throws IOException
    */
 
   private void AddFile(String uri, ZipEntry entry, int type) throws IOException {
@@ -418,7 +418,7 @@ public class WadLoader implements IWadLoader {
    */
   @Override
   @SuppressWarnings("null")
-  public void Reload() throws Exception {
+  public void Reload() throws IOException, InstantiationException, IllegalAccessException {
     wadinfo_t header = new wadinfo_t();
     int lumpcount;
     int lump_p; // Maes: same as in W_WADload
@@ -530,7 +530,6 @@ public class WadLoader implements IWadLoader {
    * @param s
    * @param type
    * @throws IOException
-   * @throws Exception
    */
   protected void addZipFile(String s, int type)
       throws IOException {

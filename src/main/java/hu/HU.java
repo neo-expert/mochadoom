@@ -540,7 +540,6 @@ public class HU implements IHeadsUp {
    * Loads a bunch of STCFNx fonts from WAD, and sets some of the remaining
    * constants.
    *
-   * @throws Exception
    */
 
   @Override
