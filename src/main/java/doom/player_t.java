@@ -113,13 +113,13 @@ public class player_t /*extends mobj_t */
   protected final static int PLAYERTHRUST = 2048 / TIC_MUL;
   private static final long ANG5 = (ANG90 / 18);
   /* psprnum_t enum */
-  public static int ps_weapon = 0,
+  public static final int ps_weapon = 0,
       ps_flash = 1,
       NUMPSPRITES = 2;
-  public static int LOWERSPEED = MAPFRACUNIT * 6;
-  public static int RAISESPEED = MAPFRACUNIT * 6;
-  public static int WEAPONBOTTOM = 128 * FRACUNIT;
-  public static int WEAPONTOP = 32 * FRACUNIT;
+  public static final int LOWERSPEED = MAPFRACUNIT * 6;
+  public static final int RAISESPEED = MAPFRACUNIT * 6;
+  public static final int WEAPONBOTTOM = 128 * FRACUNIT;
+  public static final int WEAPONTOP = 32 * FRACUNIT;
   /**
    * 16 pixels of bob
    */

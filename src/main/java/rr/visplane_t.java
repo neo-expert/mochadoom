@@ -32,7 +32,7 @@ public class visplane_t {
   public static int BOTTOMOFFSET;
   // Hack to allow quick clearing of visplanes.
   protected static char[] clearvisplane;
-  protected static StringBuilder sb = new StringBuilder();
+  protected static final StringBuilder sb = new StringBuilder();
   // HACK: the resolution awareness is shared between all visplanes.
   // Change this if you ever plan on running multiple renderers with
   // different resolution or something.

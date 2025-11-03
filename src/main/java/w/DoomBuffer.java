@@ -3,6 +3,7 @@ package w;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.nio.charset.StandardCharsets;
 
 /**
  * Very similar to the concept of ReadableDoomObjects
@@ -121,7 +122,7 @@ public class DoomBuffer implements CacheableDoomObject {
 
     buf.get(bb, 0, len);
 
-    return new String(bb, 0, len);
+    return new String(bb, 0, len, StandardCharsets.UTF_8);
   }
 
   /**
@@ -148,7 +149,7 @@ public class DoomBuffer implements CacheableDoomObject {
 
     buf.get(bb, 0, len);
 
-    return new String(bb, 0, len);
+    return new String(bb, 0, len, StandardCharsets.UTF_8);
   }
 
   /**
@@ -182,7 +183,7 @@ public class DoomBuffer implements CacheableDoomObject {
       }
     }
 
-    return new String(bb, 0, len);
+    return new String(bb, 0, len, StandardCharsets.UTF_8);
   }
 
   /**

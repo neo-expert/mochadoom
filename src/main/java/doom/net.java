@@ -79,13 +79,13 @@ public class net {
   protected static int NCMD_CHECKSUM = 0x0fffffff;
   protected static int DOOMCOM_ID = 0x12345678;
   //Max computers/players in a game.
-  protected static int MAXNETNODES = 8;
+  protected static final int MAXNETNODES = 8;
   //Networking and tick handling related.
-  protected static int BACKUPTICS = 12;
+  protected static final int BACKUPTICS = 12;
   // commant_t
-  protected static int CMD_SEND = 1;
-  protected static int CMD_GET = 2;
-  final int MAXPLAYERS = 4;
+  protected static final int CMD_SEND = 1;
+  protected static final int CMD_GET = 2;
+  static final int MAXPLAYERS = 4;
   doomcom_t doomcom;
   doomdata_t netbuffer;        // points inside doomcom
   ticcmd_t[] localcmds = new ticcmd_t[BACKUPTICS];

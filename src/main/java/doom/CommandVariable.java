@@ -116,8 +116,8 @@ public enum CommandVariable {
   }
 
   public static class ForbidFormat {
-    public static ForbidFormat FORBID = new ForbidFormat("disable");
-    public static ForbidFormat ALLOW = new ForbidFormat(null);
+    public static final ForbidFormat FORBID = new ForbidFormat("disable");
+    public static final ForbidFormat ALLOW = new ForbidFormat(null);
     private final boolean isForbidden;
 
     public ForbidFormat(final String forbidString) {

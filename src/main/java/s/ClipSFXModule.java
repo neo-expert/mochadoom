@@ -44,7 +44,7 @@ public class ClipSFXModule extends AbstractSoundDriver {
   // Returns a handle.
   //
   protected short handlenums = 0;
-  HashMap<Integer, Clip> cachedSounds = new HashMap<Integer, Clip>();
+  HashMap<Integer, Clip> cachedSounds = new HashMap<>();
   // Either it's null (no clip is playing) or non-null (some clip is playing).
   Clip[] channels;
   StringBuilder sb = new StringBuilder();

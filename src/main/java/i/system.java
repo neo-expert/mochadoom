@@ -192,12 +192,4 @@ byte*	I_AllocLow(int length)
     System.exit(-1);
   }
 
-  public void
-  Tactile
-      (int on,
-       int off,
-       int total) {
-    // UNUSED.
-    on = off = total = 0;
-  }
 }

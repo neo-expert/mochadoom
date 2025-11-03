@@ -138,6 +138,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import m.DelegateRandom;
 import m.IDoomMenu;
@@ -251,7 +252,7 @@ public class DoomMain<T, V> extends DoomStatus<T, V>
   public final BppMode bppMode;
   public final VideoScale vs;
   // Bookkeeping on players - state.
-  public final player_t[] players;
+  public final player_t[] players = new player_t[MAXPLAYERS];
   /**
    * DOOM Par Times [4][10]
    */
@@ -371,7 +372,6 @@ public class DoomMain<T, V> extends DoomStatus<T, V>
     super();
 
     // Init players
-    players = new player_t[MAXPLAYERS];
     Arrays.setAll(players, i -> new player_t(this));
 
     // Init objects
@@ -763,7 +763,7 @@ public class DoomMain<T, V> extends DoomStatus<T, V>
         String filename = "debug" + consoleplayer + ".txt";
         System.out.println("debug output to: " + filename);
         try {
-          debugfile = new OutputStreamWriter(new FileOutputStream(filename));
+          debugfile = new OutputStreamWriter(new FileOutputStream(filename), StandardCharsets.UTF_8);
         } catch (FileNotFoundException e) {
           System.err.println(
               "Couldn't open debugfile. Now, that sucks some putrid shit out of John Romero's asshole!");
@@ -3174,12 +3174,8 @@ public class DoomMain<T, V> extends DoomStatus<T, V>
       return (maketic & ~0xff) - 256 + low;
     }
 
-    if (delta < -64) {
-      return (maketic & ~0xff) + 256 + low;
-    }
+    return (maketic & ~0xff) + 256 + low;
 
-    doomSystem.Error("ExpandTics: strange value %d at maketic %d", low, maketic);
-    return 0;
   }
 
   /**

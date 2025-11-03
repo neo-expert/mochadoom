@@ -299,7 +299,7 @@ public class BasicNetworkInterface implements DoomSystemNetworking {
         sendsocket = sendaddress[doomcom.remotenode];
         sendPacket.setSocketAddress(sendsocket.getRemoteSocketAddress());
         sendSocketPacket(sendsocket, sendPacket);
-      } catch (Exception e) {
+      } catch (IOException e) {
         e.printStackTrace();
         DOOM.doomSystem.Error("SendPacket error: %s", e.getMessage());
       }

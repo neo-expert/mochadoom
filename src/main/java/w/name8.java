@@ -1,5 +1,7 @@
 package w;
 
+import java.nio.charset.StandardCharsets;
+
 public class name8 {
   static byte[] ss = new byte[9];
   public int[] x;
@@ -12,7 +14,7 @@ public class name8 {
     // in case the name was a full 8 chars
     this.s[8] = 0;
 
-    byte[] tmp = name.getBytes();
+    byte[] tmp = name.getBytes(StandardCharsets.UTF_8);
     System.arraycopy(tmp, 0, this.s, 0, Math.min(8, tmp.length));
     this.x[0] = byteArrayToInt(s, 0);
     this.x[1] = byteArrayToInt(s, 4);
@@ -35,7 +37,7 @@ public class name8 {
       ss[i] = 0;
     }
 
-    byte[] tmp = name.getBytes();
+    byte[] tmp = name.getBytes(StandardCharsets.UTF_8);
     // We must effectively limit hashes to 31 bits to be able to use them.
     System.arraycopy(tmp, 0, ss, 0, Math.min(8, tmp.length));
     return byteArrayToLong(ss, 0);
@@ -47,7 +49,7 @@ public class name8 {
       ss[i] = 0;
     }
 
-    byte[] tmp = name.getBytes();
+    byte[] tmp = name.getBytes(StandardCharsets.UTF_8);
     System.arraycopy(tmp, 0, ss, 0, Math.min(4, tmp.length));
     return byteArrayToInt(ss, 0);
   }

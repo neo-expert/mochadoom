@@ -117,9 +117,9 @@ public class DoomIO {
 
     byte[] bb = new byte[len];
 
-    dis.read(bb, 0, len);
+    dis.readFully(bb, 0, len);
 
-    return new String(bb, 0, len);
+    return new String(bb, 0, len, StandardCharsets.UTF_8);
   }
 
   public static String readString(InputStream f, int len) throws IOException {

@@ -131,7 +131,6 @@ public class DoomSystem implements IDoomSystem {
   @Override
   public void Tactile(int on, int off, int total) {
     // UNUSED.
-    on = off = total = 0;
   }
 
   @Override

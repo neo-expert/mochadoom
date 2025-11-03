@@ -8,7 +8,7 @@ import p.ActiveStates;
 
 public class state_t {
 
-  protected static StringBuilder sb = new StringBuilder();
+  protected static final StringBuilder sb = new StringBuilder();
   public spritenum_t sprite;
   /**
    * The frame should indicate which one of the frames available in the

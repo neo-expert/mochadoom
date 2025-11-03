@@ -259,21 +259,21 @@ public final class Defines {
   public static int MTF_NORMAL = 2;
   public static int MTF_HARD = 4;
   // Deaf monsters/do not react to sound.
-  public static int MTF_AMBUSH = 8;
-  public static int USERANGE = (64 * FRACUNIT);
-  public static int MELEERANGE = (64 * FRACUNIT);
-  public static int MISSILERANGE = (32 * 64 * FRACUNIT);
+  public static final int MTF_AMBUSH = 8;
+  public static final int USERANGE = (64 * FRACUNIT);
+  public static final int MELEERANGE = (64 * FRACUNIT);
+  public static final int MISSILERANGE = (32 * 64 * FRACUNIT);
   // follow a player exlusively for 3 seconds
-  public static int BASETHRESHOLD = 100;
-  public static int PT_ADDLINES = 1;
-  public static int PT_ADDTHINGS = 2;
-  public static int PT_EARLYOUT = 4;
+  public static final int BASETHRESHOLD = 100;
+  public static final int PT_ADDLINES = 1;
+  public static final int PT_ADDTHINGS = 2;
+  public static final int PT_EARLYOUT = 4;
   //
   // P_MOBJ
   //
-  public static int ONFLOORZ = MININT;
-  public static int ONCEILINGZ = MAXINT;
+  public static final int ONFLOORZ = MININT;
+  public static final int ONCEILINGZ = MAXINT;
   // Time interval for item respawning.
-  public static int ITEMQUESIZE = 128;
+  public static final int ITEMQUESIZE = 128;
 }
 

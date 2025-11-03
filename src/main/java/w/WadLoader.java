@@ -433,14 +433,14 @@ public class WadLoader implements IWadLoader {
 
     try {
       handle = new DataInputStream(new BufferedInputStream(new FileInputStream(reloadname)));
-    } catch (Exception e) {
+    } catch (IOException e) {
       I.Error("W_Reload: couldn't open %s", reloadname);
+      throw e;
     }
 
     header.read(handle);
     // Actual number of lumps in file...
     lumpcount = (int) header.numlumps;
-    header.infotableofs = header.infotableofs;
     length = lumpcount;
     fileinfo = new filelump_t[length];
 

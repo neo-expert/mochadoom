@@ -58,7 +58,7 @@ public abstract class MenuMisc {
       handle = new FileOutputStream(name);
       handle.write(source, 0, length);
       handle.close();
-    } catch (Exception e) {
+    } catch (IOException e) {
       DoomSystem.MiscError("Couldn't write file %s (%s)", name, e.getMessage());
       return false;
     }
@@ -97,7 +97,7 @@ public abstract class MenuMisc {
       buf = ByteBuffer.allocate(length);
       handle.read(buf.array());
       handle.close();
-    } catch (Exception e) {
+    } catch (IOException e) {
       DoomSystem.MiscError("Couldn't read file %s (%s)", name, e.getMessage());
       return null;
     }
@@ -121,11 +121,11 @@ public abstract class MenuMisc {
       handle.close();
 
       if (count < length) {
-        throw new Exception("Read only " + count + " bytes out of "
+        throw new IOException("Read only " + count + " bytes out of "
             + length);
       }
 
-    } catch (Exception e) {
+    } catch (IOException e) {
       DoomSystem.MiscError("Couldn't read file %s (%s)", name, e.getMessage());
       return -1;
     }

@@ -68,8 +68,8 @@ public abstract class DoomStatus<T, V> {
   protected static final int SLOWTURNTICS = 6;
   protected static final int NUMKEYS = 256;
   protected static final int BODYQUESIZE = 32;
-  public static int RESENDCOUNT = 10;
-  public static int PL_DRONE = 0x80;  // bit flag in doomdata->player
+  public static final int RESENDCOUNT = 10;
+  public static final int PL_DRONE = 0x80;  // bit flag in doomdata->player
   /**
    * More prBoom+ stuff. Used mostly for code uhm..reuse, rather
    * than to actually change the way stuff works.

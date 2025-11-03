@@ -187,21 +187,21 @@ public class EndLevel<T, V> extends AbstractEndLevel {
   public static int SP_TIMEX;
   public static int SP_TIMEY;
   // States for single-player
-  protected static int SP_KILLS = 0;
-  protected static int SP_ITEMS = 2;
-  protected static int SP_SECRET = 4;
-  protected static int SP_FRAGS = 6;
-  protected static int SP_TIME = 8;
-  protected static int SP_PAR = SP_TIME;
+  protected static final int SP_KILLS = 0;
+  protected static final int SP_ITEMS = 2;
+  protected static final int SP_SECRET = 4;
+  protected static final int SP_FRAGS = 6;
+  protected static final int SP_TIME = 8;
+  protected static final int SP_PAR = SP_TIME;
   /// /////////////// STATUS ///////////////////
   private final DoomMain<T, V> DOOM;
   // contains information passed into intermission
   public wbstartstruct_t wbs;
-  protected int SP_PAUSE = 1;
+  protected static final int SP_PAUSE = 1;
 
   // in seconds
-  protected int SHOWNEXTLOCDELAY = 4;
-  protected int SHOWLASTLOCDELAY = SHOWNEXTLOCDELAY;
+  protected static final int SHOWNEXTLOCDELAY = 4;
+  protected static final int SHOWLASTLOCDELAY = SHOWNEXTLOCDELAY;
 
   // used to accelerate or skip a stage
   int acceleratestage;

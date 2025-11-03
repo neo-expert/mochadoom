@@ -293,7 +293,7 @@ public class Map<T, V> implements IAutoMap<T, V> {
   private static final int MINIMUM_SCALE = (int) (0.7 * FRACUNIT);
   // This seems to be the limit for some maps like europe.wad
   private static final int MINIMUM_VIABLE_SCALE = FRACUNIT >> 5;
-  protected static int LEFT = 1, RIGHT = 2, BOTTOM = 4, TOP = 8;
+  protected static final int LEFT = 1, RIGHT = 2, BOTTOM = 4, TOP = 8;
   /**
    * I've made this awesome change to draw map lines on the renderer
    * - Good Sign 2017/04/05

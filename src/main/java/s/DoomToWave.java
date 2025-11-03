@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.nio.charset.StandardCharsets;
 import utils.C2JUtils;
 
 public class DoomToWave {
@@ -101,7 +102,7 @@ public class DoomToWave {
     ByteBuffer os = ByteBuffer.wrap(output);
     os.order(ByteOrder.LITTLE_ENDIAN);
     os.position(0);
-    headr.riff = ("RIFF").getBytes();
+    headr.riff = ("RIFF").getBytes(StandardCharsets.UTF_8);
     int siz = 4 + SIZEOF_WAVEFMT + SIZEOF_WAVEDATA + 2 * size;
     headr.length = siz;
     headr.wave = C2JUtils.toByteArray("WAVE");

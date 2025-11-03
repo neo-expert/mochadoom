@@ -172,14 +172,12 @@ public class node_t implements Resettable {
    */
   public int DivlineSide(int x, int y) {
     int left, right;
-    return (this.dx == 0) ? x == this.x ? 2 : x <= this.x ? eval(this.dy > 0) : eval(this.dy < 0) :
-        (this.dy == 0)
+    return this.dx == 0 ? x == this.x ? 2 : x <= this.x ? eval(this.dy > 0) : eval(this.dy < 0) :
+        this.dy == 0
             ?
             (OLDDEMO ? x : y) == this.y ? 2 : y <= this.y ? eval(this.dx < 0) : eval(this.dx > 0) :
-            (this.dy == 0)
-                ? y == this.y ? 2 : y <= this.y ? eval(this.dx < 0) : eval(this.dx > 0)
-                : (right = ((y - this.y) >> FRACBITS) * (this.dx >> FRACBITS))
-                < (left = ((x - this.x) >> FRACBITS) * (this.dy >> FRACBITS)) ? 0 :
+            (right = (y - this.y >> FRACBITS) * (this.dx >> FRACBITS))
+                < (left = (x - this.x >> FRACBITS) * (this.dy >> FRACBITS)) ? 0 :
                 right == left ? 2 : 1;
   }
 

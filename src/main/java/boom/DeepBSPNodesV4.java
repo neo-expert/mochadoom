@@ -36,10 +36,6 @@ public class DeepBSPNodesV4 implements CacheableDoomObject {
 
     numnodes = (length - 8) / mapnode_v4_t.sizeOf();
 
-    if (length < 1) {
-      return;
-    }
-
     buf.get(header); // read header
 
     nodes = malloc(mapnode_v4_t::new, mapnode_v4_t[]::new, length);

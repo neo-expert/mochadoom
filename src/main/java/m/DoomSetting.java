@@ -34,7 +34,7 @@ public class DoomSetting implements Comparable<DoomSetting> {
    * value enables it.
    */
 
-  public static DoomSetting NULL_SETTING = new DoomSetting("NULL", "", false);
+  public static final DoomSetting NULL_SETTING = new DoomSetting("NULL", "", false);
 
   static {
     // It's EVERYTHING
