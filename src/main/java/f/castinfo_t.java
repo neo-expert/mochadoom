@@ -7,8 +7,8 @@ import data.mobjtype_t;
  */
 
 public class castinfo_t {
-  String name;
-  mobjtype_t type;
+  final String name;
+  final mobjtype_t type;
 
   public castinfo_t(String name, mobjtype_t type) {
     this.name = name;

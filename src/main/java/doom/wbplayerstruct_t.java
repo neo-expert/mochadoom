@@ -26,11 +26,11 @@ public class wbplayerstruct_t implements Cloneable {
   }
 
   public wbplayerstruct_t clone() {
-    wbplayerstruct_t r = null;
+    wbplayerstruct_t r;
     try {
       r = (wbplayerstruct_t) super.clone();
     } catch (CloneNotSupportedException e) {
-      e.printStackTrace();
+      throw new RuntimeException(e);
     }
          /*r.in=this.in;
          r.skills=this.skills;

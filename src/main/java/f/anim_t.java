@@ -10,11 +10,11 @@ import w.animenum_t;
 
 public class anim_t {
 
-  public animenum_t type;
+  public final animenum_t type;
   // period in tics between animations
-  public int period;
+  public final int period;
   // number of animation frames
-  public int nanims;
+  public final int nanims;
   // ALWAYS: n/a,
   // RANDOM: period deviation (<256),
   // LEVEL: level

@@ -75,9 +75,7 @@ public class dstrings {
 
   // QuitDOOM messages
   public static final int NUM_QUITMESSAGES = 15;
-
-
-  public static final String[] endmsg =
+  private static final String[] endmsg =
       {
           // DOOM1
           QUITMSG,
@@ -110,6 +108,10 @@ public class dstrings {
           // Internal debug. Different style, too.
           "THIS IS NO MESSAGE!\nPage intentionally left blank."
       };
+
+  public static String endmsg(int index) {
+    return endmsg[index];
+  }
 }
 
 

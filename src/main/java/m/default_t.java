@@ -6,8 +6,8 @@ public class default_t {
   /**
    * this is supposed to be a pointer
    */
-  public int[] location;
-  public int defaultvalue;
+  public final int[] location;
+  public final int defaultvalue;
   int scantranslate; // PC scan code hack
   int untranslated; // lousy hack
 

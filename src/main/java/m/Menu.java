@@ -1542,10 +1542,10 @@ public class Menu<T, V> extends AbstractDoomMenu<T, V> {
       // We pick index 0 which is language sensitive,
       // or one at random, between 1 and maximum number.
       if (DOOM.language != Language_t.english) {
-        endstring = endmsg[0] + "\n\n" + DOSY;
+        endstring = endmsg(0) + "\n\n" + DOSY;
       } else {
         endstring =
-            endmsg[(DOOM.gametic % (NUM_QUITMESSAGES - 2)) + 1] + "\n\n"
+            endmsg((DOOM.gametic % (NUM_QUITMESSAGES - 2)) + 1) + "\n\n"
                 + DOSY;
       }
       StartMessage(endstring, QuitResponse, true);

@@ -215,10 +215,8 @@ public class LevelLoader extends AbstractLevelLoader {
 
   /**
    * P_LoadNodes
-   *
-   * @throws IOException
    */
-  public void LoadNodes(int lump) throws IOException {
+  public void LoadNodes(int lump) {
     mapnode_t[] data;
     int i;
     int j;
@@ -662,11 +660,10 @@ public class LevelLoader extends AbstractLevelLoader {
   }
 
   @Override
-  public void
-  SetupLevel(int episode,
-             int map,
-             int playermask,
-             skill_t skill) {
+  public void SetupLevel(int episode,
+                         int map,
+                         int playermask,
+                         skill_t skill) {
     int i;
     String lumpname;
     int lumpnum;

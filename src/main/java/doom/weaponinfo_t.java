@@ -29,12 +29,12 @@ public class weaponinfo_t {
       this.atkstate = atkstate;
       this.flashstate = flashstate;
   }*/
-  public ammotype_t ammo;
-  public statenum_t upstate;
-  public statenum_t downstate;
-  public statenum_t readystate;
-  public statenum_t atkstate;
-  public statenum_t flashstate;
+  public final ammotype_t ammo;
+  public final statenum_t upstate;
+  public final statenum_t downstate;
+  public final statenum_t readystate;
+  public final statenum_t atkstate;
+  public final statenum_t flashstate;
   public weaponinfo_t(ammotype_t ammo, statenum_t upstate,
                       statenum_t downstate, statenum_t readystate,
                       statenum_t atkstate, statenum_t flashstate) {
