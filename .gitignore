@@ -5,6 +5,7 @@ nbproject/private/
 build/
 dist/
 *.wad
+*.WAD
 *.dsg
 build.xml
 nbproject/
