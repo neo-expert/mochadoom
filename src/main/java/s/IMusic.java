@@ -14,7 +14,7 @@ public interface IMusic {
     if (CVM.bool(CommandVariable.NOMUSIC) || CVM.bool(CommandVariable.NOSOUND)) {
       return new DummyMusic();
     } else {
-      return new DavidMusicModule();
+      return new DummyMusic();
     }
   }
 
